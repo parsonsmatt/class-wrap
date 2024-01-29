@@ -1,0 +1,79 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.36.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           class-wrap
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/class-wrap#readme>
+homepage:       https://github.com/githubuser/class-wrap#readme
+bug-reports:    https://github.com/githubuser/class-wrap/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2024 Author name here
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/class-wrap
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_class_wrap
+  autogen-modules:
+      Paths_class_wrap
+  hs-source-dirs:
+      src
+  default-extensions:
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+  default-language: Haskell2010
+
+executable class-wrap-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_class_wrap
+  autogen-modules:
+      Paths_class_wrap
+  hs-source-dirs:
+      app
+  default-extensions:
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , class-wrap
+    , mtl
+  default-language: Haskell2010
+
+test-suite class-wrap-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_class_wrap
+  autogen-modules:
+      Paths_class_wrap
+  hs-source-dirs:
+      test
+  default-extensions:
+      DerivingStrategies
+      GeneralizedNewtypeDeriving
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , class-wrap
+    , mtl
+  default-language: Haskell2010
